@@ -1,4 +1,43 @@
+@import '~/src/variables.css';
+
+@font-face {
+    font-family: BoosterNextFY;
+    src: url('~/public/BoosterNextFY-Black.woff2') format('woff2');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: BoosterNextFY;
+    src: url('~/public/BoosterNextFY-Bold.woff2') format('woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: BoosterNextFY;
+    src: url('~/public/BoosterNextFY-Medium.woff2') format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: BoosterNextFY;
+    src: url('~/public/BoosterNextFY-Regular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: BoosterNextFY;
+    src: url('~/public/BoosterNextFY-Light.woff2') format('woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: BoosterNextFY;
+    src: url('~/public/BoosterNextFY-Thin.woff2') format('woff2');
+    font-weight: 100;
+}
+
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: BoosterNextFY, sans-serif;
+    background-color: var(--main-bg-color);
 }
