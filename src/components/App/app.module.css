@@ -1,2 +1,8 @@
 .root {
+    font-size: 2rem;
+    color: white;
+
+    overflow: auto;
+    padding: 5rem 2.5rem;
+    box-sizing: border-box;
 }
