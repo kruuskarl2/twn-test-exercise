@@ -2,37 +2,37 @@
 
 @font-face {
     font-family: BoosterNextFY;
-    src: url('~/public/BoosterNextFY-Black.woff2') format('woff2');
+    src: url('./assets/fonts/BoosterNextFY-Black.woff2') format('woff2');
     font-weight: 900;
 }
 
 @font-face {
     font-family: BoosterNextFY;
-    src: url('~/public/BoosterNextFY-Bold.woff2') format('woff2');
+    src: url('./assets/fonts/BoosterNextFY-Bold.woff2') format('woff2');
     font-weight: 700;
 }
 
 @font-face {
     font-family: BoosterNextFY;
-    src: url('~/public/BoosterNextFY-Medium.woff2') format('woff2');
+    src: url('./assets/fonts/BoosterNextFY-Medium.woff2') format('woff2');
     font-weight: 500;
 }
 
 @font-face {
     font-family: BoosterNextFY;
-    src: url('~/public/BoosterNextFY-Regular.woff2') format('woff2');
+    src: url('./assets/fonts/BoosterNextFY-Regular.woff2') format('woff2');
     font-weight: 400;
 }
 
 @font-face {
     font-family: BoosterNextFY;
-    src: url('~/public/BoosterNextFY-Light.woff2') format('woff2');
+    src: url('./assets/fonts/BoosterNextFY-Light.woff2') format('woff2');
     font-weight: 300;
 }
 
 @font-face {
     font-family: BoosterNextFY;
-    src: url('~/public/BoosterNextFY-Thin.woff2') format('woff2');
+    src: url('./assets/fonts/BoosterNextFY-Thin.woff2') format('woff2');
     font-weight: 100;
 }
 
