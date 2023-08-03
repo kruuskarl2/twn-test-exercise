@@ -1,0 +1,17 @@
+.root {
+    overflow: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+
+.tableRow:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tableRow {
+    border-bottom: 1px solid var(--main-foreground-color);
+}
