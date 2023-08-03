@@ -1,0 +1,50 @@
+.root {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.root:hover .imageBackground {
+    transform: scale(1.2);
+}
+
+.root:hover .image {
+    transform: scale(1.05);
+}
+
+.imageBackground {
+    filter: blur(0.625rem);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s;
+}
+
+.image {
+    aspect-ratio: 2 / 1;
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 5;
+    transition: transform 0.2s;
+}
+
+.overflow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0.625rem 1.5rem;
+    z-index: 10;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}

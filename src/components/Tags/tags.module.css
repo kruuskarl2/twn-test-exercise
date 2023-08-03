@@ -1,0 +1,13 @@
+.root {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: var(--secondary-accent-color);
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    font-weight: 700;
+}
