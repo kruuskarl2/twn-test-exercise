@@ -10,15 +10,16 @@ import styles from './articlePage.module.css';
 function ArticlePage() {
     const [article, setArticle] = useState();
 
-    const { state } = useLocation();
+    const { search } = useLocation();
 
     useEffect(() => {
-        const { personId } = state;
+        const params = new URLSearchParams(search);
+        const personId = params.get('id');
 
         fetch(`https://midaiganes.irw.ee/api/list/${personId}`)
             .then((response) => response.json())
             .then((data) => setArticle(data));
-    }, [state, setArticle]);
+    }, [setArticle, search]);
 
     if (!article) return <Loading />;
 

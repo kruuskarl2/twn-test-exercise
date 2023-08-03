@@ -18,7 +18,7 @@ function ListItemInfo(props) {
                     className={styles.intro}
                     dangerouslySetInnerHTML={{ __html: intro }}
                 />
-                <Link to={'/article'} state={{ personId: person.id }}>
+                <Link to={`/article?id=${person.id}`}>
                     <button className={styles.readMore}>Loe rohkem</button>
                 </Link>
             </div>
