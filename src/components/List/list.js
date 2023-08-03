@@ -42,11 +42,7 @@ function List(props) {
     }, [listOptions, personArray]);
 
     const listRows = parsedPersonArray.map((person, index) => {
-        return (
-            <tr className={styles.tableRow} key={index}>
-                <ListItem person={person} />
-            </tr>
-        );
+        return <ListItem person={person} key={index} />;
     });
 
     return (

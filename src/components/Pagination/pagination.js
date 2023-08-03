@@ -11,15 +11,27 @@ function Pagination(props) {
     const { currentPage } = listOptions;
 
     const selectPage = (pageNumber) => {
-        setListOptions({ ...listOptions, currentPage: pageNumber });
+        setListOptions({
+            ...listOptions,
+            currentPage: pageNumber,
+            selectedPersonId: null,
+        });
     };
 
     const selectNextPage = () => {
-        setListOptions({ ...listOptions, currentPage: currentPage + 1 });
+        setListOptions({
+            ...listOptions,
+            currentPage: currentPage + 1,
+            selectedPersonId: null,
+        });
     };
 
     const selectPrevPage = () => {
-        setListOptions({ ...listOptions, currentPage: currentPage - 1 });
+        setListOptions({
+            ...listOptions,
+            currentPage: currentPage - 1,
+            selectedPersonId: null,
+        });
     };
 
     const pageAmount = Math.ceil(personAmount / 10);

@@ -1,4 +1,6 @@
 :root {
     --main-background-color: #3a3d57;
     --main-foreground-color: #ffffff;
+    --accent-color: #14cc76;
+    --accent-muted-color: #37945c;
 }

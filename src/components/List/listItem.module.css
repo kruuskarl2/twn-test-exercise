@@ -4,3 +4,26 @@
     padding: 0.375rem 0.5rem;
     font-size: 0.875rem;
 }
+
+.listItem:nth-child(even of .listItem) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.listItem_open:nth-child(even of .listItem) {
+    background: var(--main-foreground-color);
+}
+
+.listItem {
+    border-bottom: 1px solid var(--main-foreground-color);
+    cursor: pointer;
+}
+
+.listItem_open {
+    composes: listItem;
+    background: var(--main-foreground-color);
+    color: #333;
+}
+
+.itemInfoCell {
+    padding: 0;
+}

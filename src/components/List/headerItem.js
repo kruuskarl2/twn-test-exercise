@@ -27,7 +27,12 @@ function HeaderItem(props) {
 
         setSortType(newSortType);
         setListOptions((listOptions) => {
-            return { ...listOptions, sortingIndex, sortType: newSortType };
+            return {
+                ...listOptions,
+                sortingIndex,
+                sortType: newSortType,
+                selectedPersonId: null,
+            };
         });
     }, [setListOptions, sortType, sortingIndex]);
 

@@ -1,9 +1,14 @@
-import { useMemo } from 'react';
+import { useMemo, useContext } from 'react';
+
+import ListContext from 'context/listContext';
+import ListItemInfo from './listItemInfo';
 
 import styles from './listItem.module.css';
 
 function ListItem(props) {
     const { person } = props;
+
+    const { listOptions, setListOptions } = useContext(ListContext);
 
     const cells = useMemo(() => {
         let sex;
@@ -38,7 +43,32 @@ function ListItem(props) {
         });
     }, [person]);
 
-    return <>{cells}</>;
+    const toggleSelectedPerson = (selectedPersonId) => {
+        if (listOptions.selectedPersonId === selectedPersonId) {
+            setListOptions({ ...listOptions, selectedPersonId: null });
+            return;
+        }
+        setListOptions({ ...listOptions, selectedPersonId });
+    };
+
+    const isInfoOpen = listOptions.selectedPersonId === person.id;
+    const listItemClass = isInfoOpen ? styles.listItem_open : styles.listItem;
+
+    return (
+        <>
+            <tr
+                className={listItemClass}
+                onClick={() => toggleSelectedPerson(person.id)}
+            >
+                {cells}
+            </tr>
+            <tr>
+                <td colSpan={5} className={styles.itemInfoCell}>
+                    {isInfoOpen ? <ListItemInfo person={person} /> : null}
+                </td>
+            </tr>
+        </>
+    );
 }
 
 export default ListItem;
