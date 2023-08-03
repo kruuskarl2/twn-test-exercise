@@ -3,6 +3,7 @@
 
 .root p {
     margin: 2.5rem 0;
+    font-size: 1rem;
 }
 
 .title {
@@ -14,4 +15,11 @@
 
 .intro {
     font-weight: 900;
+    font-size: 1rem;
+}
+
+@media (min-width: 961px) {
+    .title {
+        font-size: 2.8125rem;
+    }
 }
