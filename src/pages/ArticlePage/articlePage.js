@@ -17,10 +17,7 @@ function ArticlePage() {
 
         fetch(`https://midaiganes.irw.ee/api/list/${personId}`)
             .then((response) => response.json())
-            .then((data) => setArticle(data))
-            .catch(() => {
-                // TODO: Error handling
-            });
+            .then((data) => setArticle(data));
     }, [state, setArticle]);
 
     if (!article) return <Loading />;

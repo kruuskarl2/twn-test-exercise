@@ -14,10 +14,7 @@ function ListPage() {
     useEffect(() => {
         fetch('https://midaiganes.irw.ee/api/list?limit=500')
             .then((response) => response.json())
-            .then((data) => setPersonArray(data.list))
-            .catch(() => {
-                // TODO: Error handling
-            });
+            .then((data) => setPersonArray(data.list));
     }, []);
 
     const isLoading = !personArray.length;
