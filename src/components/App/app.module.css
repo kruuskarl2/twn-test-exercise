@@ -15,3 +15,14 @@
         left bottom,
         right top;
 }
+
+.page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media (min-width: 961px) {
+    .root {
+        padding: 5rem 2.5rem;
+    }
+}

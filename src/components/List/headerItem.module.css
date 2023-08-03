@@ -19,3 +19,13 @@
 .sortButton:disabled {
     cursor: default;
 }
+
+@media (min-width: 961px) {
+    .root {
+        padding: 0.625rem 1rem;
+    }
+
+    .sortButton {
+        font-size: 1rem;
+    }
+}

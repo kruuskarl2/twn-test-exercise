@@ -34,3 +34,10 @@
     background-color: var(--main-foreground-color);
     color: var(--secondary-foreground-color);
 }
+
+@media (min-width: 961px) {
+    .button {
+        width: 2.5em;
+        height: 2.5em;
+    }
+}
