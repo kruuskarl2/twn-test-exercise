@@ -7,4 +7,11 @@
     min-height: 100vh;
     background-color: var(--main-background-color);
     color: var(--main-foreground-color);
+    background-image: url(~/src/assets/bg-deco-left.svg),
+        url(~/src/assets/bg-deco-right.svg);
+    background-repeat: no-repeat;
+    background-size: 150px, 250px;
+    background-position:
+        left bottom,
+        right top;
 }
