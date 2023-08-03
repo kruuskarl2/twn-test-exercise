@@ -1,0 +1,4 @@
+.root {
+    background: #333;
+    border-bottom: 1px solid var(--main-foreground-color);
+}

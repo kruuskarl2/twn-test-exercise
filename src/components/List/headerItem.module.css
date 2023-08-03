@@ -1,0 +1,21 @@
+.root {
+    width: 20%;
+    text-align: left;
+    padding: 0.375rem 0.5rem;
+    white-space: nowrap;
+}
+
+.sortButton {
+    padding: 0;
+    border-style: none;
+    background: none;
+    color: var(--main-foreground-color);
+    font-weight: bold;
+    font-family: inherit;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.sortButton:disabled {
+    cursor: default;
+}

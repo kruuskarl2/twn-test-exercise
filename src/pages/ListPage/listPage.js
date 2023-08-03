@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 
-import styles from './listPage.module.css';
 import List from 'components/List';
+
+import styles from './listPage.module.css';
 
 function ListPage() {
     const [personArray, setPersonArray] = useState([]);

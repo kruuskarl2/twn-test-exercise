@@ -23,14 +23,18 @@ function ListItem(props) {
 
         const formattedPerson = {
             firstName: person.firstname,
-            lastName: person.lastname,
+            lastName: person.surname,
             sex,
             date,
             phone,
         };
 
-        return Object.values(formattedPerson).map((property) => {
-            return <td className={styles.cell}>{property}</td>;
+        return Object.values(formattedPerson).map((property, index) => {
+            return (
+                <td className={styles.cell} key={index}>
+                    {property}
+                </td>
+            );
         });
     }, [person]);
 
