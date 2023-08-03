@@ -19,8 +19,9 @@ function ListItem(props) {
         else sex = 'Mees';
 
         // Multiplied by 1000 so that the argument is in milliseconds, not seconds.
-        const birthDate = new Date(person.date * 1000);
-        date = `${birthDate.getDate()}.${birthDate.getMonth()}.${birthDate.getFullYear()}`;
+        const dateObj = new Date(person.date * 1000);
+        const month = dateObj.getMonth() + 1;
+        date = `${dateObj.getDate()}.${month}.${dateObj.getFullYear()}`;
 
         const areaCode = person.phone.substring(0, 4);
         const number = person.phone.substring(4);
