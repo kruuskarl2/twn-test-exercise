@@ -1,0 +1,36 @@
+.root {
+    margin-top: 0.625rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.button {
+    height: 2rem;
+    width: 2rem;
+    padding: 0;
+    border-style: none;
+    background: none;
+    cursor: pointer;
+    color: var(--main-foreground-color);
+    margin: 1.25rem 0 1rem;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.button:hover {
+    border: 1px solid var(--main-foreground-color);
+}
+
+.button:disabled {
+    opacity: 0.4;
+    border: none;
+    cursor: default;
+}
+
+.currentPageNumber {
+    composes: button;
+    background-color: var(--main-foreground-color);
+    color: #333;
+}

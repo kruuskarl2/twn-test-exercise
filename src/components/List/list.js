@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useContext } from 'react';
 
 import ListContext from 'context/listContext';
 import ListItem from './listItem';
@@ -6,15 +6,17 @@ import ListHeader from './listHeader';
 
 import styles from './list.module.css';
 
+const PAGE_SIZE = 10;
+
 function List(props) {
     const { personArray } = props;
 
-    const [listOptions, setListOptions] = useState({});
+    const { listOptions } = useContext(ListContext);
 
     const parsedPersonArray = useMemo(() => {
         let newPersonArray = structuredClone(personArray);
 
-        const { sortingIndex, sortType } = listOptions;
+        const { sortingIndex, sortType, currentPage } = listOptions;
 
         const compareByProperty = (a, b) => {
             const aValue = a[sortingIndex];
@@ -35,7 +37,8 @@ function List(props) {
             }
         }
 
-        return newPersonArray;
+        const startIndex = currentPage * PAGE_SIZE;
+        return newPersonArray.slice(startIndex, startIndex + PAGE_SIZE);
     }, [listOptions, personArray]);
 
     const listRows = parsedPersonArray.map((person, index) => {
@@ -48,14 +51,12 @@ function List(props) {
 
     return (
         <div className={styles.root}>
-            <ListContext.Provider value={{ listOptions, setListOptions }}>
-                <table className={styles.table}>
-                    <tbody>
-                        <ListHeader />
-                        {listRows}
-                    </tbody>
-                </table>
-            </ListContext.Provider>
+            <table className={styles.table}>
+                <tbody>
+                    <ListHeader />
+                    {listRows}
+                </tbody>
+            </table>
         </div>
     );
 }
