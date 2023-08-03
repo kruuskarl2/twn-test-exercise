@@ -1,5 +1,6 @@
-import styles from './loading.module.css';
 import loader from 'assets/loader.svg';
+
+import styles from './loading.module.css';
 
 function Loading() {
     return (
