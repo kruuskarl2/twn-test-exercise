@@ -1,4 +1,4 @@
 .root {
-    background: #333;
+    background: var(--secondary-foreground-color);
     border-bottom: 1px solid var(--main-foreground-color);
 }

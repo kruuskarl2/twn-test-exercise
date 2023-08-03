@@ -1,7 +1,7 @@
 .cell {
     width: 20%;
     white-space: nowrap;
-    padding: 0.375rem 0.5rem;
+    padding: 0.44rem 0.5rem;
     font-size: 0.875rem;
 }
 
@@ -21,7 +21,7 @@
 .listItem_open {
     composes: listItem;
     background: var(--main-foreground-color);
-    color: #333;
+    color: var(--secondary-foreground-color);
 }
 
 .itemInfoCell {

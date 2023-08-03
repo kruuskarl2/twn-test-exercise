@@ -1,5 +1,5 @@
 .root {
-    margin-top: 0.625rem;
+    margin-top: 1.2rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -32,5 +32,5 @@
 .currentPageNumber {
     composes: button;
     background-color: var(--main-foreground-color);
-    color: #333;
+    color: var(--secondary-foreground-color);
 }
